@@ -215,3 +215,22 @@ footer {
     nav ul { justify-content: center; }
     .page h2 { font-size: 1.5rem; }
 }
+/* Image gallery */
+.image-gallery {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.gallery-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #ffaa44;
+    transition: transform 0.3s;
+}
+.gallery-img:hover {
+    transform: scale(1.05);
+}
