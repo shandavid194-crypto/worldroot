@@ -3,44 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Welcome in our store</title>
+    <title>History of the Universe | From Big Bang to Today</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <div class="logo">Davidson</div>
+        <div class="logo">🌌 Universe History</div>
         <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" data-page="home" class="active">Home</a></li>
+            <li><a href="#" data-page="bigbang">Big Bang</a></li>
+            <li><a href="#" data-page="stars">Stars & Galaxies</a></li>
+            <li><a href="#" data-page="earth">Birth of Earth</a></li>
+            <li><a href="#" data-page="life">First Life</a></li>
+            <li><a href="#" data-page="dinosaurs">Dinosaurs</a></li>
+            <li><a href="#" data-page="humans">Humans</a></li>
+            <li><a href="#" data-page="future">Future</a></li>
         </ul>
     </nav>
 
-    <header>
-        <h1>I built this for you </h1>
-        <p>History, Political,shports — More study</p>
-        <button id="clickMeBtn">Click Me</button>
-    </header>
+    <main id="mainContent">
+        <!-- Home Page -->
+        <div id="home" class="page active-page">
+            <div class="hero">
+                <h1>🌍 History of the Universe</h1>
+                <p>13.8 Billion Years — From the Big Bang to Today</p>
+                <button id="startJourneyBtn">Start the Journey →</button>
+            </div>
 
-    <section class="cards">
-        <div class="card">
-            <h3>📝 History </h3>
-            <p>Structure of the History. Every site starts here.</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>13.8 Billion</h3>
+                    <p>Years ago — The Big Bang</p>
+                </div>
+                <div class="stat-card">
+                    <h3>200 Billion+</h3>
+                    <p>Galaxies in the observable universe</p>
+                </div>
+                <div class="stat-card">
+                    <h3>4.5 Billion</h3>
+                    <p>Years ago — Earth formed</p>
+                </div>
+                <div class="stat-card">
+                    <h3>300,000</h3>
+                    <p>Years ago — First Homo sapiens</p>
+                </div>
+            </div>
+
+            <section class="fact-section">
+                <h2>✨ Did You Know?</h2>
+                <p id="randomFact">Loading...</p>
+            </section>
         </div>
-        <div class="card">
-            <h3>🎨 Europe HIstory</h3>
-            <p> makes everything look good.</p>
+
+        <!-- Big Bang Page -->
+        <div id="bigbang" class="page">
+            <h2>💥 The Big Bang (13.8 Billion Years Ago)</h2>
+            <div class="content-card">
+                <p><strong>Before the Big Bang, there was nothing</strong> — no space, no time, no matter. Then, in a fraction of a second, the universe exploded into existence from a single point smaller than an atom.</p>
+                <ul>
+                    <li>⚡ Temperature at t=0: Infinitely hot</li>
+                    <li>🌀 Universe expanded faster than the speed of light in the first second</li>
+                    <li>🔬 First particles: quarks, electrons, photons</li>
+                    <li>🌡️ After 380,000 years: first atoms (hydrogen and helium) formed</li>
+                    <li>📡 We can still see the afterglow — it's called the Cosmic Microwave Background</li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h3>⚡ Books </h3>
-            <p>you can find intersing and dynamic content.</p>
+
+        <!-- Stars & Galaxies Page -->
+        <div id="stars" class="page">
+            <h2>🌟 The First Stars & Galaxies (13 Billion Years Ago)</h2>
+            <div class="content-card">
+                <p>Gravity pulled hydrogen and helium gas together until it got so hot and dense that <strong>nuclear fusion ignited — the first stars were born.</strong></p>
+                <ul>
+                    <li>⭐ First stars were 100-200x larger than our Sun</li>
+                    <li>💥 They lived only a few million years (short lives) before exploding as supernovas</li>
+                    <li>🌌 These explosions created the first heavy elements — carbon, oxygen, iron</li>
+                    <li>🌀 Galaxies formed as millions of stars clustered together</li>
+                    <li>🌠 Our Milky Way galaxy formed ~13.6 billion years ago</li>
+                </ul>
+            </div>
         </div>
-    </section>
+
+        <!-- Birth of Earth Page -->
+        <div id="earth" class="page">
+            <h2>🌍 Birth of Earth (4.5 Billion Years Ago)</h2>
+            <div class="content-card">
+                <p>Our solar system formed from a collapsing cloud of gas and dust. Earth was a <strong>molten hell — no oceans, no oxygen.</strong></p>
+                <ul>
+                    <li>☄️ Earth formed from asteroid collisions over 10-20 million years</li>
+                    <li>🌙 The Moon was created when a Mars-sized planet crashed into early Earth</li>
+                    <li>💧 Water arrived via comets and asteroids</li>
+                    <li>🦠 First oceans formed 4.4 billion years ago</li>
+                    <li>🌋 Earth cooled enough for a solid crust by 4 billion years ago</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- First Life Page -->
+        <div id="life" class="page">
+            <h2>🧬 First Life on Earth (3.7 Billion Years Ago)</h2>
+            <div class="content-card">
+                <p>The first life was <strong>single-celled bacteria</strong> living in the oceans. For 2 billion years, that's all there was.</p>
+                <ul>
+                    <li>🦠 Oldest fossils: Stromatolites (layered bacterial mats)</li>
+                    <li>🌬️ Cyanobacteria invented photosynthesis — filled the air with oxygen</li>
+                    <li>🔬 First complex cells (eukaryotes) appeared 2 billion years ago</li>
+                    <li>🐌 First multicellular life: sponges, worms, algae — 600 million years ago</li>
+                    <li>🌊 Cambrian Explosion (541 million years ago): most animal groups suddenly appeared</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Dinosaurs Page -->
+        <div id="dinosaurs" class="page">
+            <h2>🦖 Age of Dinosaurs (252 - 66 Million Years Ago)</h2>
+            <div class="content-card">
+                <p>Dinosaurs ruled Earth for <strong>165 million years</strong> — longer than humans have existed by 1,000 times.</p>
+                <ul>
+                    <li>🦕 First dinosaurs appeared 230 million years ago</li>
+                    <li>🦴 T-Rex lived 68-66 million years ago (not with Stegosaurus — they were 80 million years apart!)</li>
+                    <li>🌋 Pangea supercontinent broke apart during dinosaur era</li>
+                    <li>☄️ Asteroid impact 66 million years ago wiped out all non-avian dinosaurs</li>
+                    <li>🐦 Birds are the only surviving dinosaurs</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Humans Page -->
+        <div id="humans" class="page">
+            <h2>🧬 Rise of Humans (300,000 Years Ago - Today)</h2>
+            <div class="content-card">
+                <p>Humans are the newest arrivals. For 99.9% of Earth's history, we didn't exist.</p>
+                <ul>
+                    <li>🦍 Split from chimpanzee ancestors: 6-7 million years ago</li>
+                    <li>🔥 First stone tools: 2.6 million years ago (Australopithecus)</li>
+                    <li>🧠 First Homo sapiens in Africa: 300,000 years ago</li>
+                    <li>🌍 Humans migrated across the world: 70,000 - 15,000 years ago</li>
+                    <li>🏛️ First cities and writing: 6,000 years ago (Sumer, Egypt, Indus Valley)</li>
+                    <li>🛰️ Space Age: Humans landed on the Moon in 1969 — 55 years ago</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Future Page -->
+        <div id="future" class="page">
+            <h2>🔮 The Future of the Universe</h2>
+            <div class="content-card">
+                <p>What happens next? Here's what science predicts:</p>
+                <ul>
+                    <li>📱 <strong>Next 100 years:</strong> Humans colonize Mars, AI transforms society</li>
+                    <li>🔥 <strong>1 billion years:</strong> Sun becomes 10% brighter — Earth's oceans evaporate</li>
+                    <li>💀 <strong>5 billion years:</strong> Sun swells into a red giant — swallows Earth</li>
+                    <li>🌌 <strong>100 trillion years:</strong> Star formation ends — the universe goes dark</li>
+                    <li>⚫ <strong>10^100 years:</strong> Black holes evaporate — the universe becomes cold, empty nothing</li>
+                </ul>
+                <p style="margin-top: 1.5rem; text-align: center;"><em>But don't worry — that's an unimaginably long time from now.</em></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cookie Consent -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <p>🍪 This website uses cookies to improve your experience. By continuing, you agree.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="cookie-btn accept">Accept</button>
+                <button id="declineCookies" class="cookie-btn decline">Decline</button>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <p>read and increase your knowledge</p>
+        <p>🌌 History of the Universe | Educational website | Created with code</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;">Follow for more: YouTube • TikTok (coming soon)</p>
     </footer>
 
     <script src="script.js"></script>
