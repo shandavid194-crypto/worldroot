@@ -1,18 +1,24 @@
+// Wait for the page to load
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Page navigation
+    // Get all navigation links
     const navLinks = document.querySelectorAll('nav ul li a');
     const pages = document.querySelectorAll('.page');
     
+    // Function to switch between pages
     function switchPage(pageId) {
+        // Hide all pages
         pages.forEach(page => {
             page.classList.remove('active-page');
         });
+        
+        // Show the selected page
         const activePage = document.getElementById(pageId);
         if (activePage) {
             activePage.classList.add('active-page');
         }
         
+        // Update active class on navigation links
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('data-page') === pageId) {
@@ -20,19 +26,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Save to localStorage so returning users see the same page
+        // Save to localStorage
         localStorage.setItem('lastPage', pageId);
     }
     
+    // Add click event to each navigation link
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Stop page from refreshing
             const pageId = this.getAttribute('data-page');
-            if (pageId) switchPage(pageId);
+            if (pageId) {
+                switchPage(pageId);
+            }
         });
     });
     
-    // Start button
+    // Make the "Start the Journey" button work
     const startBtn = document.getElementById('startJourneyBtn');
     if (startBtn) {
         startBtn.addEventListener('click', function() {
@@ -40,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Random facts array
+    // Random facts for the "Did You Know?" section
     const facts = [
         "The universe is 13.8 billion years old — that's 3x older than Earth!",
         "There are more stars in the universe than grains of sand on all beaches on Earth.",
@@ -52,25 +61,26 @@ document.addEventListener('DOMContentLoaded', function() {
         "Light from the Big Bang is still traveling — we can see it as microwave static."
     ];
     
+    // Display a random fact
     const factElement = document.getElementById('randomFact');
     if (factElement) {
-        const randomFact = facts[Math.floor(Math.random() facts.length)];
+        const randomFact = facts[Math.floor(Math.random() * facts.length)];
         factElement.textContent = randomFact;
     }
     
-    // Restore last visited page
+    // Restore last visited page (optional)
     const lastPage = localStorage.getItem('lastPage');
     if (lastPage && document.getElementById(lastPage)) {
         switchPage(lastPage);
     }
     
-    // Cookie consent
+    // Cookie consent logic
     const cookieConsent = document.getElementById('cookieConsent');
     const cookieChoice = localStorage.getItem('cookieConsent');
     
-    if (!cookieChoice) {
+    if (!cookieChoice && cookieConsent) {
         setTimeout(() => {
-            if (cookieConsent) cookieConsent.classList.add('show');
+            cookieConsent.classList.add('show');
         }, 500);
     }
     
@@ -90,5 +100,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    console.log('🌍 Universe History website loaded — ready for YouTube & TikTok!');
+    console.log('Website loaded — navigation should work now!');
 });
