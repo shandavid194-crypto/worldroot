@@ -8,7 +8,7 @@ body {
     font-family: 'Segoe UI', 'Arial', sans-serif;
     background: radial-gradient(circle at 20% 30%, #0a0a2a, #000000);
     color: #e0e0ff;
-    min-height: 200vh;
+    min-height: 100vh;
 }
 
 nav {
@@ -235,7 +235,7 @@ footer {
     transform: scale(1.05);
 }
 
-/* Universe Animation Section */
+/* ========== UNIVERSE ANIMATION CSS ========== */
 .universe-animation {
     position: relative;
     width: 100%;
@@ -244,7 +244,7 @@ footer {
     overflow: hidden;
     margin: 2rem 0;
     border-radius: 30px;
-    border: 1px solid rgba(255, 170, 68, 0.3);
+    border: 1px solid #ffaa44;
     box-shadow: 0 0 50px rgba(0,0,0,0.5);
 }
 
@@ -261,11 +261,11 @@ footer {
     text-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 
+/* Stars */
 .star {
     position: absolute;
     background: white;
     border-radius: 50%;
-    opacity: 0;
     animation: twinkle 3s infinite;
 }
 
@@ -274,13 +274,13 @@ footer {
     50% { opacity: 1; transform: scale(1.2); }
 }
 
+/* Shooting Stars */
 .shooting-star {
     position: absolute;
     width: 100px;
     height: 2px;
-    background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0));
+    background: linear-gradient(90deg, white, transparent);
     border-radius: 50%;
-    opacity: 0;
     animation: shoot 4s linear infinite;
 }
 
@@ -302,9 +302,10 @@ footer {
     }
 }
 
+/* Particles */
 .particle {
     position: absolute;
-    background: rgba(255, 170, 68, 0.6);
+    background: #ffaa44;
     border-radius: 50%;
     animation: float 20s infinite ease-in-out;
 }
@@ -328,19 +329,21 @@ footer {
     }
 }
 
+/* Nebula Glow */
 .nebula-glow {
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(100, 50, 150, 0.4), rgba(100, 50, 150, 0));
+    background: radial-gradient(circle, rgba(150, 50, 200, 0.4), transparent);
     filter: blur(60px);
     animation: pulse 8s infinite;
 }
 
 @keyframes pulse {
     0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.3); }
+    50% { opacity: 0.7; transform: scale(1.3); }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
     .universe-animation {
         height: 300px;
